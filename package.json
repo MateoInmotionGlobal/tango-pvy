@@ -1,0 +1,15 @@
+{
+  "name": "tango-pvy",
+  "version": "1.0.0",
+  "description": "backend nodejs challenge ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest", 
+    "dev": "node src/index.js"
+  },
+  "author": "Mateo Villa",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
