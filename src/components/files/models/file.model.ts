@@ -15,7 +15,7 @@ const fileSchema: Schema = new Schema(
     VIM: { type: String, default: true },
     make: { type: String, required: true },
     file_model: { type: String, required: true },
-    mileage: { type: Number, required: true },
+    mileage: { type: String, required: true },
     price: { type: Number, required: true },
     zip_code: { type: String, required: true },
   },
