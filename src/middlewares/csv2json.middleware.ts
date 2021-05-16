@@ -1,7 +1,5 @@
 import { NextFunction, Request, Response } from 'express';
-import { UploadedFile, FileArray } from 'express-fileupload';
-import { FileDTO } from './../components/files/models/file.model';
-import csvtojson from 'csvtojson';
+import { UploadedFile } from 'express-fileupload';
 import xlsx from 'node-xlsx';
 import { WorkSheets } from '../shared/Sheet.model';
 
