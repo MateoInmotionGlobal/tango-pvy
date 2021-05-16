@@ -15,8 +15,6 @@ export const dbConnect = async () => {
 
   await mongoose.connect(uri, mongooseOpts);
   console.log(`Database connection stablished to uri ${uri}`);
-
-
 };
 
 export const dbDisconnect = async () => {

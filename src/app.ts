@@ -1,11 +1,12 @@
 import express from 'express';
-
-import indexRouter from './routes/router';
-
+import * as Routes from './routes/router';
+import upload from 'express-fileupload';
 const app = express();
 
 app.use(express.json());
 
-app.use('/files', indexRouter);
+app.use(upload());
 
-module.exports = app;
+Routes.init(app);
+
+export default app;

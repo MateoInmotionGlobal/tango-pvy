@@ -1,11 +1,10 @@
-import { Request, Response } from "express";
+import { Application, Router } from 'express';
+import filesRouter from '../components/files/files.router';
 
-var express = require('express');
-var router = express.Router();
+export const init = (app: Application): void => {
+  const router: Router = Router();
 
-/* GET home page. */
-router.get('/', function(req: Request, res: Response) {
-  res.send({result: 'is working'})
-});
+  router.use('/files', filesRouter);
 
-export default router;
+  app.use('/api', router);
+};
