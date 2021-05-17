@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
 import { UploadedFile } from 'express-fileupload';
 import xlsx from 'node-xlsx';
-import { WorkSheets } from '../shared/Sheet.model';
+import { WorkSheets } from '../shared/sheet.model';
 
 export const csv2jsonM = async (
   req: Request,
