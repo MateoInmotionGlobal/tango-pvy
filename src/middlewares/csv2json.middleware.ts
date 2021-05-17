@@ -9,8 +9,6 @@ export const csv2jsonM = async (
   next: NextFunction
 ): Promise<void> => {
   try {
-    console.log(req.files);
-    
     if (!req.files) {
       res.status(400).send({ message: 'Bad request: You must add a csv file' });
     }
@@ -18,7 +16,7 @@ export const csv2jsonM = async (
     req.body.sheet = sheet;
     return next();
   } catch (err) {
-    res.status(400).send({ message: 'Bad request' });
+    res.status(500).send(err);
   }
 };
 

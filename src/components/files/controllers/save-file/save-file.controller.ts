@@ -1,6 +1,6 @@
-import { FileDTO } from './../models/file.model';
+import { FileDTO } from '../../models/file.model';
 import { Request, Response } from 'express';
-import * as fileService from '../services/files.service';
+import * as fileService from '../../services/files.service';
 import { startSession } from 'mongoose';
 
 export const saveFileController = async (
@@ -8,6 +8,8 @@ export const saveFileController = async (
   res: Response
 ): Promise<void> => {
   try {
+    console.log(req.body);
+    
     await insertFiles(req.body.sheet);
     res.status(201).send({ messaje: 'File uploaded' });
   } catch (error) {
@@ -22,7 +24,7 @@ const insertFiles = async (files: FileDTO[]): Promise<void> => {
     for (const file of files) {
       await fileService
         .saveFile(file)
-        .then((created) => console.log('created', created._id));
+        .then((created) => console.log('created', created));
     }
   });
   session.endSession();

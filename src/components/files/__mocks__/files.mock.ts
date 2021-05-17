@@ -1,0 +1,32 @@
+export const sheet = [
+  {
+    UUID: '1',
+    VIM: 'a',
+    make: 'enero',
+    file_model: '20-1',
+    mileage: 'a-1',
+    price: 100,
+    zip_code: 'z1',
+    other: 'a',
+  },
+  {
+    UUID: '2',
+    VIM: 'b',
+    make: 'febrero',
+    file_model: '21-1',
+    mileage: 'a-2',
+    price: 101,
+    zip_code: 'z2',
+    other: 'b',
+  },
+  {
+    UUID: '3',
+    VIM: 'c',
+    make: 'marzo',
+    file_model: '22-1',
+    mileage: 'a-3',
+    price: 102,
+    zip_code: 'z3',
+    other: 'c',
+  },
+];
